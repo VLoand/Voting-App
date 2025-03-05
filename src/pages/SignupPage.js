@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/LoginPage.css';
+import '../styles/SignupPage.css';
 
-const LoginPage = () => {
+const SignupPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -13,13 +13,13 @@ const LoginPage = () => {
       setError('Please fill in all fields.');
       return;
     }
-    // Login logic (to be implemented later)
-    console.log('Login successful!');
+    // Signup logic (to be implemented later)
+    console.log('Signup successful!');
   };
 
   return (
-    <div className="login-page">
-      <h1>Login</h1>
+    <div className="signup-page">
+      <h1>Sign Up</h1>
       {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <label>
@@ -38,13 +38,13 @@ const LoginPage = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <button type="submit" className="btn btn-primary">Login</button>
+        <button type="submit" className="btn btn-primary">Sign Up</button>
       </form>
       <p>
-        Don't have an account? <Link to="/signup">Sign Up</Link>
+        Already have an account? <Link to="/login">Login</Link>
       </p>
     </div>
   );
 };
 
-export default LoginPage;
+export default SignupPage;
