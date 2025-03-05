@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import DashboardPage from './pages/DashboardPage';
 import CreatePollPage from './pages/CreatePollPage';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
   return (
@@ -13,8 +14,22 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/create-poll" element={<CreatePollPage />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <DashboardPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/create-poll"
+          element={
+            <ProtectedRoute>
+              <CreatePollPage />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </Router>
   );

@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 import '../styles/SignupPage.css';
 
 const SignupPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const { login } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,8 +16,9 @@ const SignupPage = () => {
       setError('Please fill in all fields.');
       return;
     }
-    // Signup logic (to be implemented later)
-    console.log('Signup successful!');
+    // Mock signup logic (replace with real authentication later)
+    login(email, password);
+    navigate('/dashboard');
   };
 
   return (
