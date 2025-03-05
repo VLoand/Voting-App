@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import DashboardPage from './pages/DashboardPage';
 import CreatePollPage from './pages/CreatePollPage';
+import PollPage from './pages/PollPage';
 import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
@@ -27,6 +28,14 @@ const App = () => {
           element={
             <ProtectedRoute>
               <CreatePollPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/poll/:id"
+          element={
+            <ProtectedRoute>
+              <PollPage />
             </ProtectedRoute>
           }
         />

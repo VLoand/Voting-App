@@ -1,0 +1,26 @@
+.poll-page {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .poll-page h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .poll-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .poll-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }

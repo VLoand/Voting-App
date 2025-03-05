@@ -1,35 +1,17 @@
-.dashboard-page {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .dashboard-page h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .dashboard-actions {
-    margin-bottom: 40px;
-  }
-  
-  .dashboard-sections {
-    display: grid;
-    gap: 20px;
-  }
-  
-  .dashboard-sections section {
-    background-color: #f9f9f9;
-    padding: 20px;
+.poll-card {
+    background-color: #fff;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
   }
   
-  .dashboard-sections h2 {
-    font-size: 1.8rem;
+  .poll-card h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
   }
   
-  .dashboard-sections p {
+  .poll-card p {
     color: #666;
+    margin-bottom: 10px;
   }
